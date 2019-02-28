@@ -7,22 +7,41 @@
 				<b-nav-item :to="{ name: 'home' }">Home</b-nav-item>
 			</b-navbar-nav>
 			<b-navbar-nav class="ml-auto">
-				<b-nav-item-dropdown right>
-					<template slot="button-content">
-						{{ user.username }}
-					</template>
-					<b-dropdown-item :to="{ name: 'me' }">Profile</b-dropdown-item>
-				</b-nav-item-dropdown>
+				<template v-if="user && user.id">
+					<b-nav-item-dropdown right>
+						<template slot="button-content">{{ userTag }}</template>
+						<b-dropdown-item :to="{ name: 'me' }">Profile</b-dropdown-item>
+						<b-dropdown-item href="#" @click.prevent="logout">Logout</b-dropdown-item>
+					</b-nav-item-dropdown>
+				</template>
+				<template v-else>
+					<b-nav-item href="#" @click.prevent="login">Login</b-nav-item>
+				</template>
 			</b-navbar-nav>
 		</b-collapse>
 	</b-navbar>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 
 export default {
 	name: 'NavBar',
-	computed: mapState(['user']),
+	computed: {
+		...mapState(['user']),
+		...mapGetters({ userTag: 'user/tag' }),
+	},
+	methods: {
+		login() {
+			this.$store.commit('user/set', {
+				id: '123456789012345678',
+				username: 'User',
+				discriminator: '1234',
+			});
+		},
+		logout() {
+			this.$store.commit('user/clear');
+		},
+	},
 };
 </script>

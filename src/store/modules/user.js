@@ -19,4 +19,7 @@ export default {
 			storage.set('user', JSON.stringify(state));
 		},
 	},
+	getters: {
+		tag: state => `${state.username}#${state.discriminator}`,
+	},
 };
