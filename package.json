@@ -16,7 +16,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve --open src/index.js",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build src/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
