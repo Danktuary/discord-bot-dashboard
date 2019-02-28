@@ -1,18 +1,17 @@
 <template>
 	<div id="app">
-		<div id="nav">
-			<router-link to="/">Home</router-link> |
-			<router-link to="/me">Profile</router-link>
-		</div>
+		<nav-bar />
 		<router-view />
 	</div>
 </template>
 
 <script>
+import NavBar from '@v/partials/NavBar.vue';
 import storage from './core/storage.js';
 
 export default {
 	name: 'App',
+	components: { NavBar },
 	created() {
 		// dummy user setup
 		storage.set('user', JSON.stringify({
