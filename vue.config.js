@@ -8,6 +8,7 @@ module.exports = {
 				'@': path.join(__dirname, 'src'),
 				'@c': path.join(__dirname, 'src', 'components'),
 				'@v': path.join(__dirname, 'src', 'views'),
+				'@bsv': path.join(__dirname, 'node_modules', 'bootstrap-vue', 'es', 'components'),
 			},
 		},
 	},

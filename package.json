@@ -7,7 +7,7 @@
   "bugs": {
     "url": "https://github.com/discordjs/guide/issues"
   },
-  "keywords": [	
+  "keywords": [
     "discord",
     "bot",
     "dashboard"
@@ -20,6 +20,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "bootstrap-vue": "^2.0.0-rc.13",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
