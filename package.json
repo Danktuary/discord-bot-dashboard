@@ -15,7 +15,7 @@
   "author": "Sanctuary <sanc.pw@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve --open",
+    "serve": "vue-cli-service serve --open src/index.js",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
