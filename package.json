@@ -1,10 +1,21 @@
 {
   "name": "discord-bot-dashboard",
+  "description": "A Discord bot dashboard written in Vue.",
   "version": "0.1.0",
   "private": true,
+  "repository": "https://github.com/Danktuary/discord-bot-dashboard.git",
+  "bugs": {
+    "url": "https://github.com/discordjs/guide/issues"
+  },
+  "keywords": [	
+    "discord",
+    "bot",
+    "dashboard"
+  ],
+  "author": "Sanctuary <sanc.pw@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
