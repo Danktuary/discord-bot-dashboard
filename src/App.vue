@@ -2,11 +2,28 @@
 	<div id="app">
 		<div id="nav">
 			<router-link to="/">Home</router-link> |
-			<router-link to="/about">About</router-link>
+			<router-link to="/me">Profile</router-link>
 		</div>
 		<router-view />
 	</div>
 </template>
+
+<script>
+import storage from './core/storage.js';
+
+export default {
+	name: 'App',
+	created() {
+		// dummy user setup
+		storage.set('user', JSON.stringify({
+			id: '123456789012345678',
+			username: 'User',
+			discriminator: '1234',
+		}));
+	},
+};
+</script>
+
 
 <style lang="scss">
 #app {
