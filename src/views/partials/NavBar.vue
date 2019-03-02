@@ -4,13 +4,13 @@
 		<b-navbar-toggle target="nav-collapse" />
 		<b-collapse id="nav-collapse" is-nav>
 			<b-navbar-nav>
-				<b-nav-item :to="{ name: 'home' }">Home</b-nav-item>
+				<b-nav-item :to="{ name: 'home' }" exact active-class="active">Home</b-nav-item>
 			</b-navbar-nav>
 			<b-navbar-nav class="ml-auto">
 				<template v-if="user && user.id">
 					<b-nav-item-dropdown right>
 						<template slot="button-content">{{ userTag }}</template>
-						<b-dropdown-item :to="{ name: 'me' }">Profile</b-dropdown-item>
+						<b-dropdown-item :to="{ name: 'me' }" active-class="active">Profile</b-dropdown-item>
 						<b-dropdown-item href="#" @click.prevent="logout">Logout</b-dropdown-item>
 					</b-nav-item-dropdown>
 				</template>
@@ -45,3 +45,9 @@ export default {
 	},
 };
 </script>
+
+<style lang="scss">
+#nav-bar {
+	border-bottom: 1px solid rgba(#fff, 0.1);
+}
+</style>
