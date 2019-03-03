@@ -2,7 +2,11 @@ import storage from '@/core/storage.js';
 
 export default {
 	namespaced: true,
-	state: JSON.parse(storage.get('user')) || {},
+	state: JSON.parse(storage.get('user')) || {
+		id: null,
+		username: null,
+		discriminator: null,
+	},
 	mutations: {
 		clear(state) {
 			for (const key of Object.keys(state)) {
