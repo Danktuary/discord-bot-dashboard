@@ -1,9 +1,7 @@
 <template>
 	<transition name="fade" mode="out-in">
 		<div id="command" :key="$route.params.command">
-			<b-card
-				class="bg-dark"
-			>
+			<b-card class="bg-dark">
 				<template slot="header">
 					Command info about <strong>{{ command.displayName }}</strong>
 				</template>
