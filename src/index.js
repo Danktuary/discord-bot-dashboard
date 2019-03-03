@@ -1,10 +1,12 @@
 import Vue from 'vue';
 import BootstrapVue from 'bootstrap-vue';
+import VueDiscordMessage from 'vue-discord-message';
 import App from './App.vue';
 import router from './core/router.js';
 import store from './store/index.js';
 
 Vue.use(BootstrapVue);
+Vue.use(VueDiscordMessage);
 
 Vue.config.productionTip = false;
 

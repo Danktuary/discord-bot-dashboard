@@ -22,6 +22,7 @@
   "dependencies": {
     "bootstrap-vue": "^2.0.0-rc.13",
     "vue": "^2.6.6",
+    "vue-discord-message": "^3.0.0",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
