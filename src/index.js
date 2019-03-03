@@ -6,7 +6,15 @@ import router from './core/router.js';
 import store from './store/index.js';
 
 Vue.use(BootstrapVue);
-Vue.use(VueDiscordMessage);
+Vue.use(VueDiscordMessage, {
+	profiles: {
+		bot: {
+			author: 'Bot',
+			bot: true,
+			avatar: 'red',
+		},
+	},
+});
 
 Vue.config.productionTip = false;
 
