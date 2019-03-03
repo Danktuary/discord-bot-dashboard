@@ -6,8 +6,7 @@ export default [
 		description: 'Pong',
 		examples: [
 			{
-				input: 'memes',
-				output: 'Memes!',
+				output: 'Pong!',
 			},
 		],
 	},
@@ -40,6 +39,15 @@ export default [
 		displayName: 'Kick',
 		category: 'admin',
 		description: 'Kick a user.',
+		examples: [
+			{
+				output: 'Please provide a valid user.',
+			},
+			{
+				input: 'Some user',
+				output: 'Kicked Some user#1234',
+			},
+		],
 	},
 	{
 		name: 'ban',

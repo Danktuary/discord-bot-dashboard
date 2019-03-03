@@ -7,12 +7,17 @@
 				<template slot="header">
 					Command info about <strong>{{ command.displayName }}</strong>
 				</template>
-				<b-card-sub-title>{{ command.description }}</b-card-sub-title>
+				<b-card-sub-title>
+					<span class="text-white">Description:</span>
+					{{ command.description }}
+				</b-card-sub-title>
 				<div v-if="command.examples && command.examples.length">
 					<command-example
 						v-for="(example, index) in command.examples"
 						:key="`example-${index}`"
+						:command-name="command.name"
 						:example="example"
+						class="my-3"
 					/>
 				</div>
 			</b-card>
