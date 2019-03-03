@@ -5,6 +5,7 @@
 		<b-collapse id="nav-collapse" is-nav>
 			<b-navbar-nav>
 				<b-nav-item :to="{ name: 'home' }" exact active-class="active">Home</b-nav-item>
+				<b-nav-item :to="{ name: 'commands' }" active-class="active">Commands</b-nav-item>
 			</b-navbar-nav>
 			<b-navbar-nav class="ml-auto">
 				<template v-if="user && user.id">

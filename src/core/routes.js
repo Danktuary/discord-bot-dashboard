@@ -14,4 +14,9 @@ export default [
 		// which is lazy-loaded when the route is visited.
 		component: () => import(/* webpackChunkName: "me" */ '@v/Me.vue'),
 	},
+	{
+		path: '/commands',
+		name: 'commands',
+		component: () => import(/* webpackChunkName: "commands" */ '@v/Commands.vue'),
+	},
 ];
