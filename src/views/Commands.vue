@@ -1,16 +1,16 @@
 <template>
 	<div id="commands" class="container">
-		<b-list-group v-if="categories.length">
+		<b-list-group v-if="categories.length" horizontal class="my-2">
 			<command-category
 				v-for="category in categories"
 				:key="category.name"
 				:category-name="category.name"
-				:to="{ name: 'command-category', params: { category: category.name } }"
 			/>
 		</b-list-group>
 		<div v-else>
 			Sorry, no commands to display yet!
 		</div>
+		<router-view />
 	</div>
 </template>
 
