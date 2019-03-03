@@ -18,5 +18,17 @@ export default [
 		path: '/commands',
 		name: 'commands',
 		component: () => import(/* webpackChunkName: "commands" */ '@v/Commands.vue'),
+		children: [
+			{
+				path: 'categories/:category',
+				name: 'command-category',
+				component: () => import(/* webpackChunkName: "command-category" */ '@v/CommandCategory.vue'),
+			},
+			{
+				path: ':command',
+				name: 'command',
+				component: () => import(/* webpackChunkName: "command" */ '@v/Command.vue'),
+			},
+		],
 	},
 ];
