@@ -4,6 +4,12 @@ export default [
 		displayName: 'Ping',
 		category: 'games',
 		description: 'Pong',
+		examples: [
+			{
+				input: 'memes',
+				output: 'Memes!',
+			},
+		],
 	},
 	{
 		name: 'pong',
@@ -16,6 +22,12 @@ export default [
 		displayName: 'Beep',
 		category: 'games',
 		description: 'Beep',
+	},
+	{
+		name: 'memes',
+		displayName: 'Memes',
+		category: 'misc',
+		description: 'Mememememememememememememememememes',
 	},
 	{
 		name: 'lorem',

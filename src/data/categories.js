@@ -8,4 +8,8 @@ export default [
 		name: 'games',
 		displayName: 'Games',
 	},
+	{
+		name: 'misc',
+		displayName: 'Misc',
+	},
 ];
